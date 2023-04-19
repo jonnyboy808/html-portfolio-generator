@@ -1,8 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-//const generateMarkdown = require("./generateMarkdown.js");
 
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input
 inquirer
   .prompt([
     {
@@ -53,8 +52,18 @@ inquirer
     <div class="container">
       <h1 class="display-4">Hello! My name is ${answers.name} </h1>
       <p class="lead"> I am from ${answers.location}</p>
-      <p class="lead"> This is a little about me ${answers.bio}</p>
-      
+      <p class="lead"> This is a little about me:
+       ${answers.bio}</p>
+      <h2><span class="badge badge-secondary"> Here's how to contact me: </span></h2>
+      <ul class="list-group">
+      <li class="list-group-item">My LinkedIn: ${answers.linkedIn}</li>
+        <li class="list-group-item"> My Github username is ${answers.github}</li>
+        
+      </ul>
+    </div>
+  
+  </div>
+      <script src="script.js"></script>
 </body>
 </html>`,
       (err) => (err ? console.log("error") : console.log("Yayy!"))
